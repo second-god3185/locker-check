@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <title>ロッカーチェック</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Share+Tech+Mono&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="scanlines"></div>
+
+  <div id="titleRow">
+    <h2 id="title">ロッカーチェック</h2>
+    <button id="resetColors" title="色をリセット">色リセット</button>
+    <button id="showResults" title="赤のボタンの中身を表示">リザルト</button>
+  </div>
+
+  <div id="buttonContainer"></div>
+
+  <div id="resultsModal" class="modal hidden">
+    <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="resultsTitle">
+      <button id="closeModal" class="modal-close" aria-label="閉じる">×</button>
+      <h3 id="resultsTitle">赤/黒のボタン内容</h3>
+      <div id="resultsList"></div>
+    </div>
+  </div>
+
+  <div id="inputModal" class="modal hidden input-modal-overlay">
+    <div class="modal-content input-modal-card" role="dialog" aria-modal="true" aria-labelledby="inputTitle">
+      <h3 id="inputTitle">名前の編集</h3>
+      <div class="input-wrapper">
+        <input type="text" id="inputField" class="modal-input-modern" placeholder="名前とお好みで出席番号を" autocomplete="off">
+      </div>
+      <div class="modal-actions-modern">
+        <button id="cancelInput" class="modal-btn-modern secondary">キャンセル</button>
+        <button id="saveInput" class="modal-btn-modern primary">保存</button>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="script.js"></script>
+</body>
+
+</html>
